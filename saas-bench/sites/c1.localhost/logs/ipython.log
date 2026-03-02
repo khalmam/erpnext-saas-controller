@@ -1,0 +1,23 @@
+2026-02-27 12:04:57,106 INFO ipython === bench console session ===
+2026-02-27 12:04:57,107 INFO ipython from saas_controller.utils.license import get_enabled_modules, has_module_access
+
+# Should return the modules you added in Step 3
+print(get_enabled_modules())
+
+# Test access check
+print(has_module_access("hr_module"))      # Should print True
+print(has_module_access("tax_sandbox"))    # Should print False
+2026-02-27 12:04:57,108 INFO ipython from saas_controller.saas_controller.utils.license import get_enabled_modules, has_module_access
+
+# Should return the modules you added in Step 3
+print(get_enabled_modules())
+
+# Test access check
+print(has_module_access("hr_module"))      # Should print True
+print(has_module_access("tax_sandbox"))    # Should print False
+2026-02-27 12:04:57,108 INFO ipython clear
+2026-02-27 12:04:57,109 INFO ipython print(frappe.local.site)
+2026-02-27 12:04:57,109 INFO ipython print(frappe.db.get_all("Site Subscription", fields=["name", "site_name", "valid_until"]))
+2026-02-27 12:04:57,110 INFO ipython print(frappe.db.get_all("Site Subscription", fields=["name", "site_name", "valid_until"]))
+2026-02-27 12:04:57,110 INFO ipython print(frappe.db.get_all("Site Subscription", fields=["name", "site_name", "valid_until"]))
+2026-02-27 12:04:57,111 INFO ipython === session end ===

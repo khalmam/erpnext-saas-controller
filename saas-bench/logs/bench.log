@@ -1,0 +1,95 @@
+2026-02-27 11:10:24,978 DEBUG cd saas-bench && uv venv env --seed --python python3
+2026-02-27 11:10:27,729 LOG Getting frappe
+2026-02-27 11:10:27,729 DEBUG cd saas-bench/apps && git clone https://github.com/frappe/frappe.git --branch version-15 --depth 1 --origin upstream
+2026-02-27 11:11:53,838 LOG Installing frappe
+2026-02-27 11:11:53,847 DEBUG cd /home/vkm2/Documents/github/saas-bench && uv pip install --quiet --upgrade -e /home/vkm2/Documents/github/saas-bench/apps/frappe  --python /home/vkm2/Documents/github/saas-bench/env/bin/python
+2026-02-27 11:12:04,918 DEBUG cd /home/vkm2/Documents/github/saas-bench/apps/frappe && yarn install --check-files
+2026-02-27 11:12:36,246 DEBUG cd saas-bench && bench build
+2026-02-27 11:12:36,804 INFO /home/vkm2/Documents/.bench/bin/bench build
+2026-02-27 11:13:59,865 LOG setting up backups
+2026-02-27 11:13:59,913 LOG backups were set up
+2026-02-27 11:13:59,913 INFO Bench saas-bench initialized
+2026-02-27 11:14:10,819 INFO /home/vkm2/Documents/.bench/bin/bench get-app --branch version-15 erpnext
+2026-02-27 11:14:11,919 LOG Getting erpnext
+2026-02-27 11:14:11,920 DEBUG cd ./apps && git clone https://github.com/frappe/erpnext.git --branch version-15 --depth 1 --origin upstream
+2026-02-27 11:15:54,356 LOG Installing erpnext
+2026-02-27 11:15:54,357 DEBUG cd /home/vkm2/Documents/github/saas-bench && uv pip install --quiet --upgrade -e /home/vkm2/Documents/github/saas-bench/apps/erpnext  --python /home/vkm2/Documents/github/saas-bench/env/bin/python
+2026-02-27 11:15:57,727 DEBUG cd /home/vkm2/Documents/github/saas-bench/apps/erpnext && yarn install --check-files
+2026-02-27 11:15:59,482 DEBUG bench build --app erpnext
+2026-02-27 11:16:00,170 INFO /home/vkm2/Documents/.bench/bin/bench build --app erpnext
+2026-02-27 11:16:35,681 INFO /home/vkm2/Documents/.bench/bin/bench new-site client1.localhost --install-app erpnext
+2026-02-27 11:20:33,894 INFO /home/vkm2/Documents/.bench/bin/bench mariadb
+2026-02-27 11:20:52,939 INFO /home/vkm2/Documents/.bench/bin/bench --site client1.localhost mariadb
+2026-02-27 11:21:10,737 INFO /home/vkm2/Documents/.bench/bin/bench new-site c1.localhost --install-app erpnext
+2026-02-27 11:31:11,263 INFO /home/vkm2/Documents/.bench/bin/bench set-config -g developer_mode true
+2026-02-27 11:31:14,081 INFO /home/vkm2/Documents/.bench/bin/bench start
+2026-02-27 11:31:15,239 INFO /home/vkm2/Documents/.bench/bin/bench worker
+2026-02-27 11:31:15,287 INFO /home/vkm2/Documents/.bench/bin/bench watch
+2026-02-27 11:31:15,293 INFO /home/vkm2/Documents/.bench/bin/bench schedule
+2026-02-27 11:31:15,356 INFO /home/vkm2/Documents/.bench/bin/bench serve --port 8002
+2026-02-27 11:33:15,407 INFO /home/vkm2/Documents/.bench/bin/bench new-app hr_module
+2026-02-27 11:33:15,427 LOG creating new app hr_module
+2026-02-27 11:33:47,908 LOG Installing hr_module
+2026-02-27 11:33:47,915 DEBUG cd /home/vkm2/Documents/github/saas-bench && uv pip install --quiet --upgrade -e /home/vkm2/Documents/github/saas-bench/apps/hr_module  --python /home/vkm2/Documents/github/saas-bench/env/bin/python
+2026-02-27 11:33:50,705 DEBUG bench build --app hr_module
+2026-02-27 11:33:51,418 INFO /home/vkm2/Documents/.bench/bin/bench build --app hr_module
+2026-02-27 11:34:38,797 INFO /home/vkm2/Documents/.bench/bin/bench new-app saas_controller
+2026-02-27 11:34:38,816 LOG creating new app saas_controller
+2026-02-27 11:35:16,971 LOG Installing saas_controller
+2026-02-27 11:35:16,976 DEBUG cd /home/vkm2/Documents/github/saas-bench && uv pip install --quiet --upgrade -e /home/vkm2/Documents/github/saas-bench/apps/saas_controller  --python /home/vkm2/Documents/github/saas-bench/env/bin/python
+2026-02-27 11:35:20,269 DEBUG bench build --app saas_controller
+2026-02-27 11:35:20,970 INFO /home/vkm2/Documents/.bench/bin/bench build --app saas_controller
+2026-02-27 11:35:57,807 INFO /home/vkm2/Documents/.bench/bin/bench --site client1.localhost install-app saas_controller
+2026-02-27 11:36:08,859 INFO /home/vkm2/Documents/.bench/bin/bench --site c1.localhost install-app saas_controller
+2026-02-27 11:37:31,111 INFO /home/vkm2/Documents/.bench/bin/bench set-config -g developer_mode true
+2026-02-27 11:37:36,236 INFO /home/vkm2/Documents/.bench/bin/bench start
+2026-02-27 11:37:37,456 INFO /home/vkm2/Documents/.bench/bin/bench watch
+2026-02-27 11:37:37,565 INFO /home/vkm2/Documents/.bench/bin/bench worker
+2026-02-27 11:37:37,612 INFO /home/vkm2/Documents/.bench/bin/bench serve --port 8002
+2026-02-27 11:37:37,651 INFO /home/vkm2/Documents/.bench/bin/bench schedule
+2026-02-27 11:47:26,934 INFO /home/vkm2/Documents/.bench/bin/bench --site c1.localhost migrate
+2026-02-27 11:50:47,316 INFO /home/vkm2/Documents/.bench/bin/bench --site c1.localhost install-app hr_module
+2026-02-27 11:51:05,012 INFO /home/vkm2/Documents/.bench/bin/bench --site c1.localhost migrate
+2026-02-27 11:59:45,473 INFO /home/vkm2/Documents/.bench/bin/bench --site client1.localhost console
+2026-02-27 11:59:58,129 INFO /home/vkm2/Documents/.bench/bin/bench --site c1.localhost console
+2026-02-27 12:00:01,110 INFO /home/vkm2/Documents/.bench/bin/bench --verbose --site all backup
+2026-02-27 12:03:57,680 INFO /home/vkm2/Documents/.bench/bin/bench --site c1.localhost migrate
+2026-02-27 12:05:00,691 INFO /home/vkm2/Documents/.bench/bin/bench --site c1.localhost console
+2026-03-01 12:00:01,122 INFO /home/vkm2/Documents/.bench/bin/bench --verbose --site all backup
+2026-03-01 12:11:59,453 INFO /home/vkm2/Documents/.bench/bin/bench start
+2026-03-01 12:12:01,215 INFO /home/vkm2/Documents/.bench/bin/bench worker
+2026-03-01 12:12:01,376 INFO /home/vkm2/Documents/.bench/bin/bench watch
+2026-03-01 12:12:01,432 INFO /home/vkm2/Documents/.bench/bin/bench schedule
+2026-03-01 12:12:01,782 INFO /home/vkm2/Documents/.bench/bin/bench serve --port 8002
+2026-03-01 12:16:01,213 INFO /home/vkm2/Documents/.bench/bin/bench --site client1.yourdomain.com migrate
+2026-03-01 12:16:04,963 INFO /home/vkm2/Documents/.bench/bin/bench --site client1.yourdomain.com clear-cache
+2026-03-01 12:16:24,225 INFO /home/vkm2/Documents/.bench/bin/bench --site c1.yourdomain.com migrate
+2026-03-01 12:16:41,036 INFO /home/vkm2/Documents/.bench/bin/bench --site c1.localhost migrate
+2026-03-01 12:17:25,422 INFO /home/vkm2/Documents/.bench/bin/bench --site c1.localhost clear-cache
+2026-03-01 12:20:40,402 INFO /home/vkm2/Documents/.bench/bin/bench build --app saas_controller
+2026-03-01 13:40:48,475 INFO /home/vkm2/Documents/.bench/bin/bench build --app saas_controller
+2026-03-01 13:41:13,214 INFO /home/vkm2/Documents/.bench/bin/bench --site c1.localhost clear-cache
+2026-03-01 13:45:39,586 INFO /home/vkm2/Documents/.bench/bin/bench build --app saas_controller
+2026-03-01 13:45:56,116 INFO /home/vkm2/Documents/.bench/bin/bench --site c1.localhost clear-cache
+2026-03-01 13:46:07,259 INFO /home/vkm2/Documents/.bench/bin/bench --site c1.localhost restart
+2026-03-01 13:46:07,269 WARNING /home/vkm2/Documents/.bench/bin/bench --site c1.localhost restart executed with exit code 2
+2026-03-01 13:46:22,937 INFO /home/vkm2/Documents/.bench/bin/bench restart
+2026-03-01 13:50:45,297 INFO /home/vkm2/Documents/.bench/bin/bench setup assets
+2026-03-01 13:50:45,321 WARNING /home/vkm2/Documents/.bench/bin/bench setup assets executed with exit code 2
+2026-03-02 08:24:08,690 INFO /home/vkm2/Documents/.bench/bin/bench build --app saas_controller --force
+2026-03-02 08:24:25,148 INFO /home/vkm2/Documents/.bench/bin/bench build
+2026-03-02 09:53:19,595 INFO /home/vkm2/Documents/.bench/bin/bench build --app saas_controller
+2026-03-02 10:56:11,954 INFO /home/vkm2/Documents/.bench/bin/bench build --app saas_controller
+2026-03-02 10:57:03,876 INFO /home/vkm2/Documents/.bench/bin/bench --site c1.localhost clear-cache
+2026-03-02 10:57:18,925 INFO /home/vkm2/Documents/.bench/bin/bench --site c1.localhost clear-cache
+2026-03-02 11:16:45,867 INFO /home/vkm2/Documents/.bench/bin/bench --site c1.localhost migrate
+2026-03-02 11:37:01,391 INFO /home/vkm2/Documents/.bench/bin/bench build --app saas_controller
+2026-03-02 11:37:53,414 INFO /home/vkm2/Documents/.bench/bin/bench --site c1.localhost migrate
+2026-03-02 12:00:01,664 INFO /home/vkm2/Documents/.bench/bin/bench --verbose --site all backup
+2026-03-02 12:00:09,814 INFO /home/vkm2/Documents/.bench/bin/bench build --app saas_controller
+2026-03-02 12:00:21,242 INFO /home/vkm2/Documents/.bench/bin/bench --site c1.localhost migrate
+2026-03-02 12:04:39,557 INFO /home/vkm2/Documents/.bench/bin/bench build --app saas_controller
+2026-03-02 12:04:49,725 INFO /home/vkm2/Documents/.bench/bin/bench --site c1.localhost migrate
+2026-03-02 12:08:45,039 INFO /home/vkm2/Documents/.bench/bin/bench build --app saas_controller
+2026-03-02 12:08:54,783 INFO /home/vkm2/Documents/.bench/bin/bench --site c1.localhost migrate
+2026-03-02 12:09:58,805 INFO /home/vkm2/Documents/.bench/bin/bench build --app saas_controller
